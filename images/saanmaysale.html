@@ -1,0 +1,134 @@
+
+
+
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+	<meta property="fb:app_id"        content="256954511319116"/>
+        <meta property="og:url"           content="http://www.mayhuliba.com/" />
+        <meta property="og:type"          content="website" />
+        <meta property="og:title"         content="May Huli Ba" />
+        <meta property="og:description"   content="Check if your car has been caught by the MMDA No Contact Team at MayHuliBa.com" />
+        <meta property="og:image"         content="http://www.mayhuliba.com/shareimages/File0.jpg" />
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>MAY HULI BA?</title>
+        <link href="//cdn.rawgit.com/noelboss/featherlight/1.4.0/release/featherlight.min.css" type="text/css" rel="stylesheet" />
+        <link rel="stylesheet" href="/assets/css/main.css">    
+	<script>
+            var charcount = 0;
+            function validate(e) {
+                    if (e.keyCode == 32) {
+                            e.preventDefault();
+                    } else {
+                            charcount = charcount + 1;
+                    }
+            }
+
+            function checklength() {
+                    submitFlag = true;
+                    if(document.plateform.plate_num.value.length < 5 || document.plateform.plate_num.value.length > 8 ) {
+                            submitFlag=false;
+                            alert("Invalid length - 5 to 8 characters needed!");
+                    }
+                    return submitFlag;
+            }
+
+            function get_action(form) {
+                var v = grecaptcha.getResponse();
+                if(v.length == 0)
+                {
+                    document.getElementById('captcha').innerHTML="You can't leave Captcha Code empty";
+                    return false;
+                }
+                if(v.length != 0)
+                {
+                    document.getElementById('captcha').innerHTML="Captcha completed";
+                    submitFlag = true;
+                            if(document.plateform.plate_num.value.length < 5 || document.plateform.plate_num.value.length > 8 ) {
+                                    submitFlag=false;
+                                    alert("Invalid length - 5 to 8 characters needed!");
+                            }
+                            return submitFlag;
+                }
+            }
+        </script>
+    </head>
+    <body>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1511735-30', 'auto');
+  ga('send', 'pageview');
+
+</script>        <div class="page-wrap front-page">
+            <div class="content-wrap clearfix">
+                <h1>MAY HULI BA?</h1>
+                <section class="content-left">
+										
+                    <img src="/assets/images/normal/mmda.png" alt="MMDA"/>
+                </section>
+
+                <section class="content-right">
+                    <div class="form-wrap">
+                        <form action="results.php" method="POST" name="plateform" onsubmit="return get_action(this);">
+                            <p><input name="plate_num" placeholder="ENTER YOUR PLATE NUMBER"/></p>
+                            <br>
+                            <div class="g-recaptcha" id="rcaptcha" data-sitekey="6LfGIh8TAAAAAFiT9sN3Kcjuc4lkO0NBaZRTStQJ"></div>
+                            <span id="captcha" style="color:red"></span>
+                            <noscript>
+                                <div>
+                                    <div style="width: 302px; height: 422px; position: relative;">
+                                        <div style="width: 302px; height: 422px; position: absolute;">
+                                            <iframe src="https://www.google.com/recaptcha/api/fallback?k=6LfGIh8TAAAAAFiT9sN3Kcjuc4lkO0NBaZRTStQJ"
+                                                frameborder="0" scrolling="no"
+                                                style="width: 302px; height:422px; border-style: none;">
+                                            </iframe>
+                                        </div>
+                                    </div>
+                                    <div style="width: 300px; height: 60px; border-style: none;
+                                                   bottom: 12px; left: 25px; margin: 0px; padding: 0px; right: 25px;
+                                                   background: #f9f9f9; border: 1px solid #c1c1c1; border-radius: 3px;">
+                                        <textarea id="g-recaptcha-response" name="g-recaptcha-response"
+                                                     class="g-recaptcha-response"
+                                                     style="width: 250px; height: 40px; border: 1px solid #c1c1c1;
+                                                            margin: 10px 25px; padding: 0px; resize: none;" >
+                                        </textarea>
+                                    </div>
+                                </div>
+                            </noscript>
+                            <br/>
+                            <p><button type="submit">CHECK</button></p>
+                        </form>
+                    </div>
+                </section>
+
+            </div> <!-- .content-wrap -->
+			
+						
+            <footer class="footer-wrap">
+                <h4>#MayHuliBa</h4>
+                <p>Data from <a href="http://www.mmda.gov.ph" target="_blank">MMDA</a> No Contact Apprehension Program as of&nbsp;03/05/2018&nbsp;| <a href="disclaimer.php" data-featherlight="ajax">DISCLAIMER</a></p>
+                <p><a href="https://www.facebook.com/dialog/feed?app_id=256954511319116&link=http://www.mayhuliba.com/&picture=http://www.mayhuliba.com/shareimages/File0.jpg&name=May Huli Ba?&description=Check if your car has been caught by the MMDA No Contact Team at MayHuliBa.com&caption=May Huli Ba?&redirect_uri=http://www.mayhuliba.com/" target="_blank"><img src="/assets/images/facebook-icon.png" alt="Facebook"/></a> <a href="https://twitter.com/share?url=http://MayHuliBa.com&text=Check if your car has been caught by the MMDA No Contact Team at &hashtags=#mayhuliba" target="_blank"><img src="/assets/images/twitter-icon.png" alt="Twitter"/></a></p>
+            </footer>
+        </div>
+        
+        <script src="https://www.google.com/recaptcha/api.js"></script>
+        <script type="text/javascript" src="/assets/js/jquery-1.10.2.js"></script>
+        <script type="text/javascript" src="/assets/js/jquery-ui.min.js"></script>
+        <!--lightbox-->
+        <!-- https://github.com/noelboss/featherlight/ -->
+        <script src="//cdn.rawgit.com/noelboss/featherlight/1.4.0/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+        <!--lightbox end-->
+        <script type="text/javascript" src="/assets/js/main.js"></script>
+    </body>
+</html>
